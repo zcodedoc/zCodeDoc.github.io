@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  #ProgrammerLifeWin
+title:  Programmer Life Win
 date:   2017-05-19 21:04:09 +0000
 ---
 
@@ -17,4 +17,4 @@ So I just thought I would share this Programmer-Life-Win, which is actually a Li
 Thanks for reading & sharing in my joy! 
 🤗 😀
 
-
+*#ProgrammerLifeWin*
