@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  \#ProgrammerLifeWin
+title:  #ProgrammerLifeWin
 date:   2017-05-19 21:04:09 +0000
 ---
 
