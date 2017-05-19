@@ -1,0 +1,21 @@
+# Site settings
+title: #TheProgrammerLife
+header-img: img/home-bg.png
+email: zeedrake3000@gmail.com
+copyright_name: NickisKnowledge
+description: > # this means to ignore newlines until "baseurl:"
+  The Dive into the Enormous & Ever-changing Sea of Web Development!
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  NickisKnowledge
+learn_profile: NickisKnowledge
+email_username: zeedrake3000@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
