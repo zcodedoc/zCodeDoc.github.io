@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Easy Reservations"
-date:       2017-11-11 15:22:48 +0000
+date:       2017-11-11 10:22:49 -0500
 permalink:  easy_reservations
 ---
 
