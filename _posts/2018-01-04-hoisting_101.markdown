@@ -1,0 +1,138 @@
+---
+layout: post
+title:      "Hoisting 101"
+date:       2018-01-04 23:13:12 +0000
+permalink:  hoisting_101
+---
+
+
+Here are the TOP 3 things to remember:
+
+**1)** JavaScript compiler compiles your code before it’s interpreted, aka all declarations and their scopes get stored in it’s memory – both variable and functions. (*example 1 - global scope*)
+* **while the variable declarations are stored their assignments are not**
+* **only NAMED functions get stored** 
+
+**2)** Variable declarations and functions are moved to the top of the code it’s scoped in, hence the name ‘hoisting’. (*example 2 & 2.1 - functional scoping*)
+* **function declaration take precedence over variable declarations**
+  * i.e. when a variable and function have the same names
+* **function declarations are turned into an expression at the top**
+
+**3)** Function declarations are hoisted, not function expressions. (*example 3*)
+
+<br />
+<hr />
+<br />
+
+**Example 1** *(global scope)*:
+```
+name = ‘Mallory’; 
+
+var name;
+
+console.log(name);  // Mallory
+```
+
+***compiler interpretation:***
+```
+var name;
+
+name = ‘Mallory’;
+
+console.log(name);  // Mallory
+```
+
+<br />
+<hr />
+<br />
+
+**Example 2.0** *( functional scope)*:
+```
+function test() {
+  var name;
+  console.log(name);  // undefined
+  name = 'Mallory';	
+}
+							                                                                                          
+test();
+
+```
+
+***compiler interpretation:***
+```
+test();
+
+function test() {
+  var name;
+  console.log(name);  // undefined
+  name = 'Mallory';
+ } 
+```
+The `console.log` return undefined because the variable was used before it was defined.
+
+<br />
+<hr />
+<br />
+
+**Example 2.1**
+```
+var hoisting = function () {
+  console.log(printName());  // Mallory
+  function printName() {
+    return 'Mallory';
+  }
+}
+							                                                                                              
+hoisting();
+```							                                                                                          
+																																																				 
+***compiler interpretation:***
+ ```
+ var hoisting;
+ 
+ hoisting = function () {  // this assignment is NOT stored in memory
+   printName();
+   function printName() {
+     return 'Mallory';
+   }
+   console.log(printName());  // Mallory
+}
+
+ hoisting();		
+```
+
+<br />
+<hr />
+<br />
+
+**Example 3**
+```
+showName();
+
+var showName = function printName() {
+    // ...
+}
+```
+
+***compiler interpretation:***
+ ```
+ printName(); // ReferenceError because printName is not defined
+ var showName; 
+ 
+ showName();  // TypeError because it's not a function yet
+ showName = function printName() {
+   // ... 
+ }
+ ```
+
+Function expressions behavior like variables.  Therefore even named functions don't get hoisted, if it is part of a function expression. 
+
+<br />
+<hr />
+<br />
+
+References:
+<br />
+    https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md
+    http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/
+    https://elegantcode.com/2011/03/24/basic-javascript-part-12-function-hoisting/
+
