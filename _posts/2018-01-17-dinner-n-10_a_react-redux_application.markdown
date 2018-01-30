@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Dinner-n-10 a React-Redux Application"
-date:       2018-01-17 16:20:22 +0000
+date:       2018-01-17 11:20:23 -0500
 permalink:  dinner-n-10_a_react-redux_application
 ---
 
@@ -26,6 +26,6 @@ Even with all that, I’m sure you’re saying, *‘O, that’s nothing fancy’
 
 Well in case you didn’t know, this site is a SPA, Single Page Application, *(did you know that acronym?)*
 
-Redux is what’s allowing my navigation system to work along side with React. Using their snazzy ‘Browser Router’, ‘Link’ and ‘Switch’ components when a user clicks on one of the navigation links, the page transforms itself to display the associated component.
+React Router Dom is what’s allowing my navigation system to work along side with React. Using their snazzy ‘Browser Router’, ‘Link’ and ‘Switch’ components when a user clicks on one of the navigation links, the page transforms itself to display the associated component.
 
 And that my friends, is my cherry on top!  
