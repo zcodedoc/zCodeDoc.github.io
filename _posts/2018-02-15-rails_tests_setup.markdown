@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Tests Setup"
-date:       2018-02-15 23:00:55 +0000
+date:       2018-02-15 18:00:56 -0500
 permalink:  rails_tests_setup
 ---
 
@@ -10,9 +10,9 @@ When it comes to testing I've found the first difficult task to even begin to st
 the setup. Here's a step-by-step guide of what I did to setup tests for my Rails API
 models.
 
-**NOTE**: This guide is being created from a Rails 5 project that has been created **without** the built in test suite and already had its associations set up.
+**NOTE**: This guide is being created from a Rails 5 project that has been created **without** the built-in test suite and already had its associations set up.
 
-1) In the Gemfile create `group :develop, :test` block
+1) In the Gemfile create `group :develop,:test` block
 * this block will install gems that both the developement and test environments will use
 
 2) add these gems to the block
@@ -23,7 +23,7 @@ models.
   - allows you to create sample data for your tests
 * `faker` - a library that generates fake data
 
-3) In the Gemfile create `group :test` block
+3) In the Gemfile create `group:test` block
 * this block is specifically for gems in the test environments
 
 4)  add these gems to the block
